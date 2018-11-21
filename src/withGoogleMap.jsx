@@ -59,6 +59,8 @@ export function withGoogleMap(BaseComponent) {
       if (typeof google !== "undefined") {
         const map = new google.maps.Map(node)
         this.setState({ map })
+      } else {
+        throw Error("Google Maps js wasn't loaded successfully")
       }
     }
 
